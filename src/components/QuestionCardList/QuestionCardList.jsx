@@ -11,4 +11,3 @@ export const QuestionCardList = memo(({ cards }) => {
     </div>
   );
 });
-
