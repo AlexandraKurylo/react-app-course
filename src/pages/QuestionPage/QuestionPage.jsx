@@ -26,10 +26,6 @@ export const QuestionPage = () => {
     setIsChecked(data.completed);
   });
 
-  useEffect(() => {
-    fetchCard();
-  }, []);
-
   const [updateCard, isCardUpdating] = useFetch(async (isChecked) => {
     const response = await fetch(`${API_URL}/react/${id}`, {
       method: "PATCH",
@@ -38,6 +34,7 @@ export const QuestionPage = () => {
     const data = await response.json();
 
     setCard(data);
+    setIsChecked(data.completed);
   });
 
   useEffect(() => {
