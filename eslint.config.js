@@ -30,7 +30,7 @@ export default [
       ...react.configs.recommended.rules,
       ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
-      "react/jsx-no-target-blank": "off",
+      "react/jsx-no-target-blank": "warn",
       "no-unused-vars": "warn",
       "react/prop-types": "warn",
       "react/jsx-key": "warn",
