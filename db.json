@@ -564,6 +564,18 @@
       "resources": [],
       "level": 1,
       "completed": false
+    },
+    {
+      "id": "cec2",
+      "question": "hello",
+      "answer": "world",
+      "description": "querty",
+      "resources": [
+        "https://react.dev/reference/react/useActionState",
+        " https://ru.legacy.reactjs.org"
+      ],
+      "level": 2,
+      "completed": false
     }
   ]
 }
