@@ -26,7 +26,7 @@ const createCardAction = async (_prevState, formData) => {
       }),
     });
 
-    const question = response.json();
+    const question = await response.json();
     toast.success("New question is succesfully created!");
 
     return isClearForm ? {} : question;
