@@ -565,18 +565,6 @@
       "level": 1,
       "completed": false,
       "editDate": "10.02.2026, 22:40"
-    },
-    {
-      "id": "cec2",
-      "question": "hello",
-      "answer": "world",
-      "description": "querty",
-      "resources": [
-        "https://react.dev/reference/react/useActionState",
-        " https://ru.legacy.reactjs.org"
-      ],
-      "level": 2,
-      "completed": false
     }
   ]
 }
