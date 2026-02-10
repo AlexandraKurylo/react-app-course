@@ -1,5 +1,6 @@
 import { useActionState } from "react";
 import { Button } from "../../components/Button";
+import { Loader } from "../../components/Loader";
 import cls from "./AddQuestionPage.module.css";
 import { delayFn } from "../../helpers/delayFn";
 import { toast } from "react-toastify";
@@ -45,6 +46,7 @@ export const AddQuestionPage = () => {
 
   return (
     <>
+      {isPending && <Loader />}
       <h1 className={cls.formTitle}>Add new question</h1>
       <div className={cls.formContainer}>
         <form action={formAction} className={cls.form}>
@@ -92,7 +94,6 @@ export const AddQuestionPage = () => {
               id="resourcesField"
               cols="30"
               rows="2"
-              required
               placeholder="please enter resources separated by commas"
             ></textarea>
           </div>
