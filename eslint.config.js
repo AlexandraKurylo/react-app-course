@@ -35,6 +35,7 @@ export default [
       "react/prop-types": "warn",
       "react/jsx-key": "warn",
       "react/display-name": "off",
+      "no-console": ["warn", { allow: ["warn", "error"] }],
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "prettier/prettier": [
         "error",
