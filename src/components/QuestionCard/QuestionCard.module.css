@@ -43,3 +43,9 @@
 .cardAnswer:hover {
     filter: none;
 }
+
+@media (any-hover: none) and (pointer: coarse)  {
+    .cardAnswer {
+        filter: none;
+    }
+}

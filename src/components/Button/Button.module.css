@@ -29,5 +29,10 @@
     color: #000;
     background-color: #ce7e1d;
 
+}
 
+@media (any-hover: none) and (pointer: coarse) {
+    .btn {
+        border-color: transparent;
+    }
 }
