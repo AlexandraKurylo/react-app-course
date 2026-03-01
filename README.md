@@ -1,6 +1,6 @@
 # ⚛️ React Learning Flashcards
 
-![Project Preview](./assets/preview.png)
+![Project Preview](./src/assets/preview.png)
 
 An interactive, feature-rich platform designed for mastering React.js core concepts through a structured flashcard system. This Single Page Application (SPA) serves as both a study tool and a demonstration of modern frontend architecture.
 
