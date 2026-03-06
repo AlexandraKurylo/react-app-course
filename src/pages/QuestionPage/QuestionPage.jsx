@@ -48,6 +48,10 @@ export const QuestionPage = () => {
     updateCard(!isChecked);
   };
 
+  useEffect(() => {
+    card !== null && setIsChecked(card.completed);
+  }, [card])
+
   return (
     <>
       {isCardLoading && <Loader />}
