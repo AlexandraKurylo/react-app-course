@@ -3,7 +3,7 @@ import { Loader } from "../../components/Loader";
 import cls from "./AddQuestionPage.module.css";
 import { delayFn } from "../../helpers/delayFn";
 import { toast } from "react-toastify";
-import { API_URL } from "../../constants";
+import { API_URL } from "../../constants/global.constants";
 import { QuestionForm } from "../../components/QuestionForm";
 
 const createCardAction = async (_prevState, formData) => {

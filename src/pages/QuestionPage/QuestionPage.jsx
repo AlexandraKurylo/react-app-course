@@ -3,7 +3,7 @@ import cls from "./QuestionPage.module.css";
 import { Badge } from "../../components/Badge";
 import { Button } from "../../components/Button";
 import { useEffect, useId, useState } from "react";
-import { API_URL } from "../../constants";
+import { API_URL } from "../../constants/global.constants";
 import { useFetch } from "../../hooks/useFetch";
 import { Loader, SmallLoader } from "../../components/Loader";
 import { useAuth } from "../../hooks/useAuth";

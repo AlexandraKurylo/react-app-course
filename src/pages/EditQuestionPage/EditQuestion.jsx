@@ -4,7 +4,7 @@ import { QuestionForm } from "../../components/QuestionForm";
 import cls from "./EditQuestionPage.module.css";
 import { delayFn } from "../../helpers/delayFn";
 import { toast } from "react-toastify";
-import { API_URL } from "../../constants";
+import { API_URL } from "../../constants/global.constants";
 import { dateFormat } from "../../helpers/dateFormat";
 import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
