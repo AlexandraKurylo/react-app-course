@@ -1,4 +1,4 @@
-import { useActionState } from "react";
+import { useActionState, type FC } from "react";
 import { Loader } from "../../components/Loader";
 import { QuestionForm } from "../../components/QuestionForm";
 import cls from "./EditQuestionPage.module.css";
@@ -8,14 +8,15 @@ import { API_URL } from "../../constants/global.constants";
 import { dateFormat } from "../../helpers/dateFormat";
 import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
+import type { IQuestionCard, IQuestionCardState } from "../../types/global.types";
 
-const editCardAction = async (_prevState, formData) => {
+const editCardAction = async (_prevState: Partial<IQuestionCardState>, formData: FormData) => {
   try {
     await delayFn();
 
     const newQuestion = Object.fromEntries(formData);
-    const resources = newQuestion.resources.trim();
-    const isClearForm = newQuestion.clearForm; // formData.get("clearForm")
+    const resources = (newQuestion.resources as string).trim();
+    const isClearForm = newQuestion.clearForm;
     const questionId = newQuestion.questionId;
 
     const response = await fetch(`${API_URL}/react/${questionId}`, {
@@ -39,15 +40,22 @@ const editCardAction = async (_prevState, formData) => {
     toast.success("New question is edited succesfully!");
 
     return isClearForm ? {} : question;
-  } catch (error) {
-    toast.error(error.message);
+  } catch (error: any) {
+    toast.error(error?.message);
     return {};
   }
 };
 
-export const EditQuestion = ({ initialState = {} }) => {
+export interface IEditQuestionProps {
+  initialState: IQuestionCard;
+}
+
+export const EditQuestion: FC<IEditQuestionProps> = ({ initialState }) => {
   const navigate = useNavigate();
-  const [formState, formAction, isPending] = useActionState(editCardAction, { ...initialState, clearForm: false });
+  const [formState, formAction, isPending] = useActionState<Partial<IQuestionCardState>, FormData>(editCardAction, {
+    ...initialState,
+    clearForm: false,
+  });
 
   const [removeQuestion, isQuestionRemoving] = useFetch(async () => {
     await fetch(`${API_URL}/react/${initialState.id}`, {
@@ -74,7 +82,7 @@ export const EditQuestion = ({ initialState = {} }) => {
         </button>
         <QuestionForm
           formAction={formAction}
-          state={formState}
+          cardState={formState}
           isPending={isPending || isQuestionRemoving}
           submitBtnText="Edit Question"
         />
