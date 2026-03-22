@@ -8,9 +8,15 @@ import { API_URL } from "../../constants/global.constants";
 import { dateFormat } from "../../helpers/dateFormat";
 import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
-import type { IQuestionCard, IQuestionCardState } from "../../types/global.types";
+import type {
+  IQuestionCard,
+  IQuestionCardState,
+} from "../../types/global.types";
 
-const editCardAction = async (_prevState: Partial<IQuestionCardState>, formData: FormData) => {
+const editCardAction = async (
+  _prevState: Partial<IQuestionCardState>,
+  formData: FormData,
+) => {
   try {
     await delayFn();
 
@@ -52,7 +58,10 @@ export interface IEditQuestionProps {
 
 export const EditQuestion: FC<IEditQuestionProps> = ({ initialState }) => {
   const navigate = useNavigate();
-  const [formState, formAction, isPending] = useActionState<Partial<IQuestionCardState>, FormData>(editCardAction, {
+  const [formState, formAction, isPending] = useActionState<
+    Partial<IQuestionCardState>,
+    FormData
+  >(editCardAction, {
     ...initialState,
     clearForm: false,
   });
@@ -77,7 +86,11 @@ export const EditQuestion: FC<IEditQuestionProps> = ({ initialState }) => {
       {(isPending || isQuestionRemoving) && <Loader />}
       <h1 className={cls.formTitle}>Edit question</h1>
       <div className={cls.formContainer}>
-        <button className={cls.removeBtn} disabled={isPending || isQuestionRemoving} onClick={onRemoveQuestionHandler}>
+        <button
+          className={cls.removeBtn}
+          disabled={isPending || isQuestionRemoving}
+          onClick={onRemoveQuestionHandler}
+        >
           X
         </button>
         <QuestionForm

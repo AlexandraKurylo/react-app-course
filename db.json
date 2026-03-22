@@ -22,8 +22,8 @@
         "https://react.dev/learn/writing-markup-with-jsx"
       ],
       "level": 2,
-      "completed": true,
-      "editDate": "03.02.2025, 20:25"
+      "completed": false,
+      "editDate": "22.03.2026, 20:58"
     },
     {
       "id": "3",
@@ -69,7 +69,8 @@
         "https://react.dev/learn/state-a-components-memory"
       ],
       "level": 2,
-      "completed": true
+      "completed": false,
+      "editDate": "22.03.2026, 20:58"
     },
     {
       "id": "7",

@@ -6,7 +6,7 @@ An interactive, feature-rich platform designed for mastering React.js core conce
 
 ## 🚀 Live Demo
 
-👉 https://react-cards-app-qtcz.onrender.com – *(Click to view the live site!)*
+👉 https://react-cards-app-qtcz.onrender.com – _(Click to view the live site!)_
 
 ---
 
