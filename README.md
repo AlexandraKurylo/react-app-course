@@ -48,8 +48,6 @@ The application provides a dynamic "Question & Answer" interface where users can
 
 ---
 
----
-
 ## Folder Structure
 
 ```text
