@@ -52,6 +52,7 @@ The application provides a dynamic "Question & Answer" interface where users can
 
 ## Folder Structure
 
+```text
 src/
 ├── assets/ # Static assets (images, icons, etc.)
 ├── auth/ # Authentication logic
@@ -94,6 +95,7 @@ src/
 ├── App.tsx # Main application shell & routing
 ├── index.css # Global styles
 └── main.tsx # Application entry point
+```
 
 ---
 
