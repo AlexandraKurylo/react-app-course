@@ -52,10 +52,10 @@ The application provides a dynamic "Question & Answer" interface where users can
 
 ```text
 src/
-├── assets/ # Static assets (images, icons, etc.)
-├── auth/ # Authentication logic
-│ └── AuthProvider/ # Auth context and provider components
-├── components/ # Reusable UI components
+├── assets/              # Static assets (images, icons, etc.)
+├── auth/                # Authentication logic
+│ └── AuthProvider/      # Auth context and provider components
+├── components/          # Reusable UI components
 │ ├── Badge/
 │ ├── Button/
 │ ├── Header/
@@ -65,34 +65,34 @@ src/
 │ ├── QuestionCardList/
 │ ├── QuestionForm/
 │ ├── SearchInput/
-│ └── icons.tsx # Shared icon components/library
-├── constants/ # App-wide constants
+│ └── icons.tsx          # Shared icon components/library
+├── constants/           # App-wide constants
 │ └── global.constants.ts
-├── features/ # Complex functional modules
-│ └── ThemeToggler/ # Theme switching logic & UI
-├── helpers/ # Utility functions
+├── features/            # Complex functional modules
+│ └── ThemeToggler/      # Theme switching logic & UI
+├── helpers/             # Utility functions
 │ ├── dateFormat.ts
 │ └── delayFn.ts
-├── hooks/ # Custom React hooks
+├── hooks/               # Custom React hooks
 │ ├── useAuth.ts
 │ ├── useFetch.ts
 │ └── useTheme.ts
-├── pages/ # Routed view components
+├── pages/               # Routed view components
 │ ├── AddQuestionPage/
 │ ├── EditQuestionPage/
 │ ├── ForbiddenPage/
 │ ├── HomePage/
 │ ├── NotFoundPage/
 │ └── QuestionPage/
-├── theme/ # Styling configuration & provider
+├── theme/               # Styling configuration & provider
 │ ├── index.ts
 │ └── ThemeProvider.tsx
-├── types/ # Global TypeScript definitions
+├── types/               # Global TypeScript definitions
 │ ├── global.enums.ts
 │ └── global.types.ts
-├── App.tsx # Main application shell & routing
-├── index.css # Global styles
-└── main.tsx # Application entry point
+├── App.tsx              # Main application shell & routing
+├── index.css            # Global styles
+└── main.tsx             # Application entry point
 ```
 
 ---
@@ -107,25 +107,25 @@ Open a terminal and run the command:
 git clone [https://github.com/AlexandraKurylo/react-app-course](https://github.com/AlexandraKurylo/react-app-course)
 ```
 
-#### 3. Installing dependencies
+#### 2. Installing dependencies
 
 ```bash
    npm install
 ```
 
-#### 4. Starting the database (Terminal 1)
+#### 3. Starting the database (Terminal 1)
 
 ```bash
    npm run server
 ```
 
-#### 5. Launching the application (Terminal 2)
+#### 4. Launching the application (Terminal 2)
 
 ```bash
    npm run dev
 ```
 
-#### 6. You can run the database and application with one command in one terminal
+#### 5. You can run the database and application with one command in one terminal
 
 ```bash
    npm run start:app
